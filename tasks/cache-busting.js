@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 					fs.unlink(file);
 				})
 			}
-			fs.rename(this.data.file, outputFile);
+			fs.renameSync(this.data.file, outputFile);
 
 			gruntTextReplace.replace({
 				src: this.data.replace,
